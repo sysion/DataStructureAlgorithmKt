@@ -18,34 +18,21 @@
 * Input: ["1, 3, 9, 10, 17, 18", "1, 4, 9, 10"]
 * Output: 1,9,10
 */
+fun main(){
+	val inpString: Array<String> = arrayOf<String>("1, 3, 4, 7, 13", "1, 2, 4, 13, 15")
+	//val inpString: Array<String> = arrayOf<String>("1, 3, 9, 10, 17, 18", "1, 4, 9, 10")
 
-class FindIntersectionOfTwoStrings {
-	fun main(){
-		//val stringsOrNulls = arrayOfNulls<String>(10) 	//returns Array<String?>
-		//val someStrings = Array<String>(5) { "it = $it" }
-		//val otherStrings = arrayOf("a", "b", "c")
-		//val inpString: Array<String> = arrayOf("1, 3, 4, 7, 13", "1, 2, 4, 13, 15")
-		val inpString: Array<String> = arrayOf("1, 3, 9, 10, 17, 18", "1, 4, 9, 10")
-		//val inpString: Array<String> = arrayOf("2, 3, 8, 12, 17, 18", "1, 4, 9, 10")
-
-		FindIntersection(inpString)
-	}
-
-	fun FindIntersection(strArr: Array<String>): String{
-		var result = ""
-		val tmpFirst: Array<String> = strArr[0].split(",")
-		val tmpSecond: Array<String> = strArr[1].split(",")
-
-
-		
-		
-		println("result = "+ result)
-
-		return result
-	}
-
+	FindIntersection(inpString)
 }
 
-/*
-Huawei Ascend Mate 7
-*/
+
+fun FindIntersection(strArr: Array<String>): String{
+	val tmpFirst: List<String> = strArr[0].split(",")
+	val tmpSecond: List<String> = strArr[1].split(",")
+
+	var result = tmpFirst.filter{ tmpSecond.contains(it)}.joinToString()
+
+	println("result = "+ result)		//check result
+
+	return result
+}
