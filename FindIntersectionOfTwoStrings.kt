@@ -30,7 +30,7 @@ fun FindIntersection(strArr: Array<String>): String{
 	val tmpFirst: List<String> = strArr[0].split(",")
 	val tmpSecond: List<String> = strArr[1].split(",")
 
-	var result = tmpFirst.filter{ tmpSecond.contains(it)}.joinToString()
+	var result = tmpFirst.filter{ tmpSecond.contains(it)}.joinToString().replace(" ", "")
 
 	println("result = "+ result)		//check result
 
