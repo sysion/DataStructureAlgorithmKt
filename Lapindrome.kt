@@ -55,9 +55,9 @@ fun main(){
 	//val inpString = "abbaab"
 	//val inpString = "ababc"
 	//val inpString = "gotrej"
-	//val inpString = "abcabcbb"
+	val inpString = "abcabcbb"
 	//val inpString = "bbbbb"
-	val inpString = "pwwkew"
+	//val inpString = "pwwkew"
 	//val inpString = ""
 
 	LapindromeCheck(inpString)
@@ -66,24 +66,22 @@ fun main(){
 fun LapindromeCheck(inputString: String): String{
 	var isLapindrome = "NO"
 	var strLen = inputString.trim().length
+	var evenOdd = if (strLen % 2 == 0) 0 else 1
 
 	if (strLen == 0) {
 		println("Is BLANK a Lapindrome? : $isLapindrome")
 		return isLapindrome
 	}
 
-	char [] str1,str2;
-	int l=s.length();
-	if(l%2==0){
-	str1= s.substring(0,(l/2)).toCharArray();
-	str2= s.substring((l/2),l).toCharArray();
-	}else{
-	str1= s.substring(0,(l/2)).toCharArray();
-	str2= s.substring((l/2)+1,l).toCharArray();
-	}
-	Arrays.sort(str1);
-	Arrays.sort(str2);
-	
+	var charArray1 = inputString.substring(0, evenOdd+strLen/2).toCharArray()
+	var charArray2 = inputString.substring(strLen/2, strLen).toCharArray()
+	//println(charArray1)
+	//println(charArray2)
+	//println(charArray1.sorted().toString())
+	//println(charArray2.sorted().toString())
+
+	if (charArray1.sorted() == charArray2.sorted())
+		isLapindrome = "YES"
 
 	println("Is $inputString a Lapindrome? : $isLapindrome")
 	return isLapindrome
