@@ -46,3 +46,45 @@
 * NO
 * NO 
 */
+
+fun main(){
+	//val inpString = "gaga"
+	//val inpString = "abcde"
+	//val inpString = "rotor"
+	//val inpString = "xyzxy"
+	//val inpString = "abbaab"
+	//val inpString = "ababc"
+	//val inpString = "gotrej"
+	//val inpString = "abcabcbb"
+	//val inpString = "bbbbb"
+	val inpString = "pwwkew"
+	//val inpString = ""
+
+	LapindromeCheck(inpString)
+}
+
+fun LapindromeCheck(inputString: String): String{
+	var isLapindrome = "NO"
+	var strLen = inputString.trim().length
+
+	if (strLen == 0) {
+		println("Is BLANK a Lapindrome? : $isLapindrome")
+		return isLapindrome
+	}
+
+	char [] str1,str2;
+	int l=s.length();
+	if(l%2==0){
+	str1= s.substring(0,(l/2)).toCharArray();
+	str2= s.substring((l/2),l).toCharArray();
+	}else{
+	str1= s.substring(0,(l/2)).toCharArray();
+	str2= s.substring((l/2)+1,l).toCharArray();
+	}
+	Arrays.sort(str1);
+	Arrays.sort(str2);
+	
+
+	println("Is $inputString a Lapindrome? : $isLapindrome")
+	return isLapindrome
+}
