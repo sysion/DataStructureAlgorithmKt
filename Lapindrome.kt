@@ -81,7 +81,12 @@ fun LapindromeCheck(inputString: String): String{
 	//println(charArray2.sorted().toString())
 
 	if (charArray1.sorted() == charArray2.sorted())
-		isLapindrome = "YES"	
+		isLapindrome = "YES"
+
+	//var charArray1 = inputString.toList().slice(0..evenOdd+strLen/2)			
+	//var charArray2 = inputString.toList().slice(-1+strLen/2..strLen-1)
+	//println(charArray1)
+	//println(charArray2)
 
 	println("Is $inputString a Lapindrome? : $isLapindrome")
 	return isLapindrome
