@@ -51,11 +51,11 @@ fun main(){
 	//val inpString = "gaga"
 	//val inpString = "abcde"
 	//val inpString = "rotor"
-	//val inpString = "xyzxy"
+	val inpString = "xyzxy"
 	//val inpString = "abbaab"
 	//val inpString = "ababc"
 	//val inpString = "gotrej"
-	val inpString = "abcabcbb"
+	//val inpString = "abcabcbb"
 	//val inpString = "bbbbb"
 	//val inpString = "pwwkew"
 	//val inpString = ""
@@ -81,7 +81,7 @@ fun LapindromeCheck(inputString: String): String{
 	//println(charArray2.sorted().toString())
 
 	if (charArray1.sorted() == charArray2.sorted())
-		isLapindrome = "YES"
+		isLapindrome = "YES"	
 
 	println("Is $inputString a Lapindrome? : $isLapindrome")
 	return isLapindrome
