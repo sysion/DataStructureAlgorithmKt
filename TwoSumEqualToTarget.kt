@@ -46,20 +46,8 @@ fun main(){
 }
 
 fun SumTwoNumbersEqualToTarget(intArray: IntArray, target: Int){
-	//val b = intArray.toList().filter{it -> it > 7}
 
-	//val arr = Array(length){  }
-	//val arr = Array(3){ "" }  //is equivalent for: arrayOf("","","")
-	//val emptyArray : Array<Int> = emptyArray()
-	//val emptyArray = emptyArray<Int>()
-	//val emptyArray : Array<Int> = arrayOf()
-	//val emptyArray = arrayOf<Int>()
-	//val boxedInts = arrayOfNulls<Int>(size) //equivalent in Java: new Integer[size]
-	//val arrayOfZeros = IntArray(size) //equivalent in Java: new int[size]
-	//var result: IntArray = intArrayOf<2>()	//not ok
-	var result: IntArray = IntArray(2)	//empty IntArray of size 2
-	//var result: Array<Int> = arrayOf()
-	//val sumCheck: Map<Int, Int> = hashMapOf<Int, Int>()		//Map giving error with sumCheck[intArray[cnt]] = cnt
+	var result: IntArray = IntArray(2)
 	val sumCheck: HashMap<Int, Int> = hashMapOf<Int, Int>()
 	var sumPair = 0
 
@@ -67,13 +55,11 @@ fun SumTwoNumbersEqualToTarget(intArray: IntArray, target: Int){
 		sumPair = target - intArray[cnt]
 
 		if (sumCheck.containsKey(sumPair)) {
-			//return result = {sumCheck[sumPair], cnt}
 			result[0] = sumCheck[sumPair]!!
 			result[1] = cnt
 		}
 		sumCheck[intArray[cnt]] = cnt
 	}
 	println(Arrays.toString(result))
-	//println(result.toList())
 
 }
