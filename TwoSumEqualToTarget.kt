@@ -45,7 +45,7 @@ fun main(){
 	SumTwoNumbersEqualToTarget(inputArray, targetSum)
 }
 
-fun SumTwoNumbersEqualToTarget(intArray: IntArray, target: Int){
+fun SumTwoNumbersEqualToTarget(intArray: IntArray, target: Int): IntArray {
 
 	var result: IntArray = IntArray(2)
 	val sumCheck: HashMap<Int, Int> = hashMapOf<Int, Int>()
@@ -60,6 +60,7 @@ fun SumTwoNumbersEqualToTarget(intArray: IntArray, target: Int){
 		}
 		sumCheck[intArray[cnt]] = cnt
 	}
-	println(Arrays.toString(result))
 
+	println(Arrays.toString(result))
+	return result
 }
